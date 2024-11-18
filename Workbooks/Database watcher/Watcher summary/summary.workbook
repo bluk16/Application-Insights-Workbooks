@@ -4,10 +4,14 @@
     {
       "type": 1,
       "content": {
-        "json": "Watcher \"{watcherName}\" does not have a data store. Add a data store to finish watcher configuration.",
+        "json": "Watcher `{watcherName}` does not have a data store. Add a data store to finish watcher configuration.",
         "style": "info"
       },
       "conditionalVisibilities": [
+        {
+          "parameterName": "watcherResource",
+          "comparison": "isNotEqualTo"
+        },
         {
           "parameterName": "watcherDataStoreType",
           "comparison": "isEqualTo"
@@ -26,6 +30,10 @@
         "style": "warning"
       },
       "conditionalVisibilities": [
+        {
+          "parameterName": "watcherResource",
+          "comparison": "isNotEqualTo"
+        },
         {
           "parameterName": "adxClusterPingResult",
           "comparison": "isNotEqualTo",
