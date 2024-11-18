@@ -2,59 +2,45 @@
   "version": "Notebook/1.0",
   "items": [
     {
-      "type": 12,
+      "type": 1,
       "content": {
-        "version": "NotebookGroup/1.0",
-        "groupType": "editable",
-        "items": [
-          {
-            "type": 1,
-            "content": {
-              "json": "Watcher \"{watcherName}\" does not have a data store. Add a data store to finish watcher configuration.",
-              "style": "info"
-            },
-            "conditionalVisibilities": [
-              {
-                "parameterName": "watcherDataStoreType",
-                "comparison": "isEqualTo"
-              },
-              {
-                "parameterName": "watcherResource",
-                "comparison": "isNotEqualTo"
-              }
-            ],
-            "name": "no_data_store_text"
-          },
-          {
-            "type": 1,
-            "content": {
-              "json": "Cannot connect to Kusto query URI `{adxClusterUri}`, database `{adxDatabase}`. The data store might be stopped or unreachable, specified query URI might be invalid, or permissions might be insufficient.\r\n\r\n**Common causes:**\r\n\r\n1. You do not have access to the data store. Ask an administrator to [grant access](https://go.microsoft.com/fwlink/?linkid=2297712).\r\n1. Public connectivity to the Azure Data Explorer cluster is disabled. Learn how to [set up private connectivity](https://go.microsoft.com/fwlink/?linkid=2297583).\r\n\r\n[Learn more](https://go.microsoft.com/fwlink/?linkid=2268015) to troubleshoot other causes.",
-              "style": "warning"
-            },
-            "conditionalVisibilities": [
-              {
-                "parameterName": "adxClusterPingResult",
-                "comparison": "isNotEqualTo",
-                "value": "1"
-              },
-              {
-                "parameterName": "adxClusterUri",
-                "comparison": "isNotEqualTo"
-              },
-              {
-                "parameterName": "adxDatabase",
-                "comparison": "isNotEqualTo"
-              }
-            ],
-            "name": "missing_data_bad_permissions_text"
-          }
-        ]
+        "json": "Watcher \"{watcherName}\" does not have a data store. Add a data store to finish watcher configuration.",
+        "style": "info"
       },
-      "conditionalVisibility": {
-        "parameterName": "watcherResource",
-        "comparison": "isNotEqualTo"
+      "conditionalVisibilities": [
+        {
+          "parameterName": "watcherDataStoreType",
+          "comparison": "isEqualTo"
+        },
+        {
+          "parameterName": "watcherResource",
+          "comparison": "isNotEqualTo"
+        }
+      ],
+      "name": "no_data_store_text"
+    },
+    {
+      "type": 1,
+      "content": {
+        "json": "Cannot connect to Kusto query URI `{adxClusterUri}`, database `{adxDatabase}`. The data store might be stopped or unreachable, specified query URI might be invalid, or permissions might be insufficient.\r\n\r\n**Common causes:**\r\n\r\n1. You do not have access to the data store. Ask an administrator to [grant access](https://go.microsoft.com/fwlink/?linkid=2297712).\r\n1. Public connectivity to the Azure Data Explorer cluster is disabled. Learn how to [set up private connectivity](https://go.microsoft.com/fwlink/?linkid=2297583).\r\n\r\n[Learn more](https://go.microsoft.com/fwlink/?linkid=2268015) to troubleshoot other causes.",
+        "style": "warning"
       },
-      "name": "warnings_group"
+      "conditionalVisibilities": [
+        {
+          "parameterName": "adxClusterPingResult",
+          "comparison": "isNotEqualTo",
+          "value": "1"
+        },
+        {
+          "parameterName": "adxClusterUri",
+          "comparison": "isNotEqualTo"
+        },
+        {
+          "parameterName": "adxDatabase",
+          "comparison": "isNotEqualTo"
+        }
+      ],
+      "name": "missing_data_bad_permissions_text"
     },
     {
       "type": 9,

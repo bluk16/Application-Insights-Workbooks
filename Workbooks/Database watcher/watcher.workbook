@@ -260,6 +260,10 @@
         "loadFromTemplateId": "Community-Workbooks/Database watcher/Watcher summary",
         "items": []
       },
+      "conditionalVisibility": {
+        "parameterName": "watcherResource",
+        "comparison": "isNotEqualTo"
+      },
       "name": "watcher_summary"
     }
   ],
