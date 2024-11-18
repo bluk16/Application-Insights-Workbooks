@@ -67,7 +67,6 @@
         "groupType": "editable",
         "title": "Data store",
         "expandable": true,
-        "expanded": true,
         "items": [
           {
             "type": 9,
