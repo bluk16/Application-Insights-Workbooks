@@ -2,53 +2,270 @@
   "version": "Notebook/1.0",
   "items": [
     {
-      "type": 1,
+      "type": 9,
       "content": {
-        "json": "Watcher `{watcherName}` does not have a data store. Add a data store to finish watcher configuration.",
-        "style": "info"
+        "version": "KqlParameterItem/1.0",
+        "parameters": [
+          {
+            "id": "4d1aef87-cfcf-4dcb-93c9-77f5e405a902",
+            "version": "KqlParameterItem/1.0",
+            "name": "no_watcher_resource_id",
+            "type": 1,
+            "isHiddenWhenLocked": true,
+            "typeSettings": {
+              "multiLineText": true,
+              "editorLanguage": "markdown"
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "value": "A watcher is not selected."
+          },
+          {
+            "version": "KqlParameterItem/1.0",
+            "name": "no_data_store_text",
+            "type": 1,
+            "query": "{\"version\":\"1.0.0\",\"content\":\"{\\\"Text\\\":\\\"Watcher `{watcherName}` does not have a data store. Add a data store to finish watcher configuration.\\\"}\",\"transformers\":null}",
+            "isHiddenWhenLocked": true,
+            "typeSettings": {
+              "multiLineText": true,
+              "editorLanguage": "markdown"
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "queryType": 8,
+            "value": "The watcher `dfurman-fabric-1` does not have a data store. Add a data store to finish watcher configuration.",
+            "id": "6c92376e-79ca-47b8-9b01-63de31e4e301"
+          },
+          {
+            "version": "KqlParameterItem/1.0",
+            "name": "no_kusto_uri",
+            "type": 1,
+            "isHiddenWhenLocked": true,
+            "typeSettings": {
+              "multiLineText": true,
+              "editorLanguage": "markdown"
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "value": "The Kusto query URI is not specified.",
+            "id": "7998d055-08b4-432a-9c5c-35e4e825af07"
+          },
+          {
+            "version": "KqlParameterItem/1.0",
+            "name": "no_kusto_database",
+            "type": 1,
+            "isHiddenWhenLocked": true,
+            "typeSettings": {
+              "multiLineText": true,
+              "editorLanguage": "markdown"
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "value": "The Kusto database is not specified.",
+            "id": "1253f4bb-aefa-4850-bcb0-80a5082ae764"
+          },
+          {
+            "version": "KqlParameterItem/1.0",
+            "name": "failed_data_store_connection_text",
+            "type": 1,
+            "query": "{\"version\":\"1.0.0\",\"content\":\"{\\\"Text\\\":\\\"Cannot connect to Kusto query URI `{adxClusterUri}`, database `{adxDatabase}`. The data store might be stopped or unreachable, specified query URI might be invalid, or permissions might be insufficient.\\\\r\\\\n\\\\r\\\\n**Common causes:**\\\\r\\\\n\\\\r\\\\n1. You do not have access to the data store. Ask an administrator to [grant access](https://go.microsoft.com/fwlink/?linkid=2297712).\\\\r\\\\n1. Public connectivity to the Azure Data Explorer cluster is disabled. Learn how to [set up private connectivity](https://go.microsoft.com/fwlink/?linkid=2297583).\\\\r\\\\n\\\\r\\\\n[Learn more](https://go.microsoft.com/fwlink/?linkid=2268015) to troubleshoot other causes.\\\"}\",\"transformers\":null}",
+            "isHiddenWhenLocked": true,
+            "typeSettings": {
+              "multiLineText": true,
+              "editorLanguage": "markdown",
+              "multiLineHeight": 7
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "queryType": 8,
+            "id": "aefd1670-4cc5-41f8-ba02-8f2e2df82037"
+          },
+          {
+            "version": "KqlParameterItem/1.0",
+            "name": "successful_data_store_connection_text",
+            "type": 1,
+            "isHiddenWhenLocked": true,
+            "typeSettings": {
+              "multiLineText": true,
+              "editorLanguage": "markdown"
+            },
+            "timeContext": {
+              "durationMs": 86400000
+            },
+            "value": "Connected to data store.",
+            "id": "ba558de3-5685-416d-b37f-701a0a84bcb2"
+          },
+          {
+            "id": "0f567986-9058-4d5c-8043-00f192274f27",
+            "version": "KqlParameterItem/1.0",
+            "name": "data_store_status_text",
+            "type": 1,
+            "isHiddenWhenLocked": true,
+            "criteriaData": [
+              {
+                "criteriaContext": {
+                  "leftOperand": "watcherResourceId",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "param",
+                  "resultVal": "no_watcher_resource_id"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "watcherDataStoreType",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "param",
+                  "resultVal": "no_data_store_text"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "adxClusterUri",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "param",
+                  "resultVal": "no_kusto_uri"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "adxDatabase",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "param",
+                  "resultVal": "no_kusto_database"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "adxClusterPingResult",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "param",
+                  "resultVal": "failed_data_store_connection_text"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "adxClusterPingResult",
+                  "operator": "==",
+                  "rightValType": "static",
+                  "rightVal": "1",
+                  "resultValType": "param",
+                  "resultVal": "successful_data_store_connection_text"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "operator": "Default",
+                  "resultValType": "static",
+                  "resultVal": "-"
+                }
+              }
+            ],
+            "timeContext": {
+              "durationMs": 86400000
+            }
+          },
+          {
+            "id": "f0fde190-0fd4-4f4c-aea4-201ae72568d3",
+            "version": "KqlParameterItem/1.0",
+            "name": "data_store_status_style",
+            "type": 1,
+            "isHiddenWhenLocked": true,
+            "criteriaData": [
+              {
+                "criteriaContext": {
+                  "leftOperand": "watcherResourceId",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "static",
+                  "resultVal": "Info"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "watcherDataStoreType",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "static",
+                  "resultVal": "Info"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "adxClusterUri",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "static",
+                  "resultVal": "Info"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "adxDatabase",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "static",
+                  "resultVal": "Info"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "adxClusterPingResult",
+                  "operator": "is Empty",
+                  "rightValType": "param",
+                  "resultValType": "static",
+                  "resultVal": "Warning"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "leftOperand": "adxClusterPingResult",
+                  "operator": "==",
+                  "rightValType": "static",
+                  "rightVal": "1",
+                  "resultValType": "static",
+                  "resultVal": "Success"
+                }
+              },
+              {
+                "criteriaContext": {
+                  "operator": "Default",
+                  "resultValType": "static",
+                  "resultVal": "Plain"
+                }
+              }
+            ],
+            "timeContext": {
+              "durationMs": 86400000
+            }
+          }
+        ],
+        "style": "pills",
+        "queryType": 0,
+        "resourceType": "microsoft.operationalinsights/workspaces"
       },
-      "conditionalVisibilities": [
-        {
-          "parameterName": "watcherResource",
-          "comparison": "isNotEqualTo"
-        },
-        {
-          "parameterName": "watcherDataStoreType",
-          "comparison": "isEqualTo"
-        }
-      ],
-      "name": "no_data_store_text"
+      "conditionalVisibility": {
+        "parameterName": "alwaysHidden",
+        "comparison": "isNotEqualTo"
+      },
+      "name": "adx_connection_status_parameters"
     },
     {
       "type": 1,
       "content": {
-        "json": "Cannot connect to Kusto query URI `{adxClusterUri}`, database `{adxDatabase}`. The data store might be stopped or unreachable, specified query URI might be invalid, or permissions might be insufficient.\r\n\r\n**Common causes:**\r\n\r\n1. You do not have access to the data store. Ask an administrator to [grant access](https://go.microsoft.com/fwlink/?linkid=2297712).\r\n1. Public connectivity to the Azure Data Explorer cluster is disabled. Learn how to [set up private connectivity](https://go.microsoft.com/fwlink/?linkid=2297583).\r\n\r\n[Learn more](https://go.microsoft.com/fwlink/?linkid=2268015) to troubleshoot other causes.",
-        "style": "warning"
+        "json": "{data_store_status_text}",
+        "style": "{data_store_status_style}"
       },
-      "conditionalVisibilities": [
-        {
-          "parameterName": "adxClusterPingResult",
-          "comparison": "isEqualTo"
-        },
-        {
-          "parameterName": "adxClusterPingResult",
-          "comparison": "isNotEqualTo",
-          "value": "1"
-        },
-        {
-          "parameterName": "watcherResource",
-          "comparison": "isNotEqualTo"
-        },
-        {
-          "parameterName": "adxClusterUri",
-          "comparison": "isNotEqualTo"
-        },
-        {
-          "parameterName": "adxDatabase",
-          "comparison": "isNotEqualTo"
-        }
-      ],
-      "name": "missing_data_bad_permissions_text"
+      "name": "data_store_connection_status_text"
     },
     {
       "type": 9,
@@ -65,8 +282,7 @@
             "timeContext": {
               "durationMs": 86400000
             },
-            "queryType": 9,
-            "value": null
+            "queryType": 9
           },
           {
             "version": "KqlParameterItem/1.0",
