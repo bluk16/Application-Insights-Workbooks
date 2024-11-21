@@ -35,8 +35,7 @@
               "durationMs": 86400000
             },
             "queryType": 8,
-            "value": "The watcher `dfurman-fabric-1` does not have a data store. Add a data store to finish watcher configuration.",
-            "id": "6c92376e-79ca-47b8-9b01-63de31e4e301"
+            "id": "a871ff18-44b2-4215-b26d-d82794ddafa0"
           },
           {
             "version": "KqlParameterItem/1.0",
@@ -51,7 +50,7 @@
               "durationMs": 86400000
             },
             "value": "The Kusto query URI is not specified.",
-            "id": "7998d055-08b4-432a-9c5c-35e4e825af07"
+            "id": "4ae48b5d-4073-4343-86d2-3b0b3e58b4b8"
           },
           {
             "version": "KqlParameterItem/1.0",
@@ -66,7 +65,7 @@
               "durationMs": 86400000
             },
             "value": "The Kusto database is not specified.",
-            "id": "1253f4bb-aefa-4850-bcb0-80a5082ae764"
+            "id": "edc7140d-cff5-47f4-b6e1-ae2158fddfd7"
           },
           {
             "version": "KqlParameterItem/1.0",
@@ -83,7 +82,7 @@
               "durationMs": 86400000
             },
             "queryType": 8,
-            "id": "aefd1670-4cc5-41f8-ba02-8f2e2df82037"
+            "id": "d5b98196-4431-40ec-aec8-149e0cc6b3b1"
           },
           {
             "version": "KqlParameterItem/1.0",
@@ -98,7 +97,7 @@
               "durationMs": 86400000
             },
             "value": "Connected to data store.",
-            "id": "ba558de3-5685-416d-b37f-701a0a84bcb2"
+            "id": "427a6ecb-1f64-4bdc-9fd6-dcb690e74fc7"
           },
           {
             "id": "0f567986-9058-4d5c-8043-00f192274f27",
@@ -250,8 +249,7 @@
           }
         ],
         "style": "pills",
-        "queryType": 0,
-        "resourceType": "microsoft.operationalinsights/workspaces"
+        "queryType": 8
       },
       "conditionalVisibility": {
         "parameterName": "alwaysHidden",
